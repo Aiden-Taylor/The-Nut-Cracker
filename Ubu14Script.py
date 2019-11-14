@@ -7,22 +7,47 @@ print("Welcome to Aiden's Nut Cracker, better check your cup")
 print("Also, pay homage to Aiden, he is about to get you fat points")
 bump = 1
 
+#Logs
+yeet.run([" cat > log.txt"], shell=True)
+
+
+
 #upgrade time
 if input("Upgrade, Quakebuttock? (y/n)") == ("y" or "Y"):
     print("installing upgrades and updates, fatty. Oh, I mean Cooper")
     yeet.run(["apt-get upgrade"], shell=True)
     yeet.run(["apt-get update"], shell=True)
+    
+    yeet.run(['echo "Updates Installed Hopefully" >> log.txt'], shell=True)
 
 #user removal
 users = input("Does a user need to be removed, fart sniffer? (y/n)")
 if users == "y" or users == "Y":
     bump = 0
 while bump == 0:
-    yeet.run(["userdel", input("Name of the user, idiot?")], shell=False)
+    x = input("Name of the user, idiot?")
+    yeet.run(["userdel", x], shell=False)
+    yeet.run(['echo "User', x,'" >> log.txt'], shell=True)
     users = input("Does another user need to be removed, booger connoisseur? (y/n)")
     if users != "y" and users != "Y":
         bump = 1
 
+#package-removal
+users = input("What  (y/n)")
+if users == "y" or users == "Y":
+    bump = 0
+ 
+yeet.run([" cat > yeeters.txt"], shell=True)
+yeet.run(["apt list --installed | less >> yeeters.txt"], shell=True)
+yeet.run(["sendmail joshua.reddy@rocklinusd.org  < yeeters.txt"], shell=True)
+
+while bump == 0:
+    yeet.run(["apt-get --purge remove", input("Frickin Name of the package, bill?")], shell=False)
+    
+    #yeet.run(["Y")], shell=False)
+    users = input("Does another fucker need to be removed,ass_man? (y/n)")
+    if users != "y" and users != "Y":
+        bump = 1
 #bum daemon install
 if input("Install bum, forehead? (y/n)") == ("y" or "Y"):
     print("Installing bum")
