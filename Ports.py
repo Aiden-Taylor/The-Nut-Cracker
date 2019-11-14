@@ -1,5 +1,13 @@
+#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
+#                                        MOVING ON TO PORTS
+#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
+#Ports
 kekel = input("Do you wan some ports?")
 if kekel == "y" or kekel =="Y":
+	kekel = input("Do you want ports listed?")
+	if kekel == "y" or kekel == "Y":
+		#kekel = input("What range do you want to go from (start-stop)")
+		print(yeet.Popen(["lsof -i"],stdout=yeet.PIPE).communicate()[0])
 	things = ["69","6660","6661","6662","6663","6664","6665","6666","6667","6668","6669","23","135","411","412","61","21","20","3389","25","139"]
 	kekel = input("Specifically block ports or just let the program go through its list ya weed smokin, cop shootin, bike stealin, watermelon munchin, finger lickin, white woman rapin, go for nothin respectable white person? (Y/N)")
 	if kekel == "Y":
@@ -21,6 +29,9 @@ if kekel == "y" or kekel == "Y":
 	things = ["telnet","vsftpd","apache2"]
 	kekel = input("Specifically block services or just let the program go through its list ya weed smokin, cop shootin, bike stealin, watermelon munchin, finger lickin, white woman rapin, go for nothin respectable white person? (Y/N)")
 	if kekel == "Y":
+		kekel = input("list all services?")
+		if kekel == "Y" or kekel == "y":
+			print(yeet.popen(["systemctl list-unit-files"],stdout=yeet.PIPE).communicate()[0])
 		kekel = input("put in services you want to block in format of     telnet,ftp,service_name...")
 		print("PS ur mom is a ho")
 		things = kekel.split(",")
