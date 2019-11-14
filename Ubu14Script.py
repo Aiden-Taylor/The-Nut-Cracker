@@ -7,6 +7,12 @@ print("Welcome to Aiden's Nut Cracker, better check your cup")
 print("Also, pay homage to Aiden, he is about to get you fat points")
 bump = 1
 
+#upgrade time
+if input("Upgrade, Quakebuttock? (y/n)") == ("y" or "Y"):
+    print("installing upgrades and updates, fatty. Oh, I mean Cooper")
+    yeet.run(["apt-get upgrade"], shell=True)
+    yeet.run(["apt-get update"], shell=True)
+
 #user removal
 users = input("Does a user need to be removed, fart sniffer? (y/n)")
 if users == "y" or users == "Y":
@@ -35,12 +41,7 @@ while bump == 0:
     yeet.run(["deluser", input("Name of the user, idiot?"), "sudo"], shell=False)
     users = input("Does anyone else need to be removed from admin permissions, Ivan? (y/n)")
     if users != "y" and users != "Y":
-        bump = 1
-        
-#upgrade time
-print("installing upgrades and updates, fatty. Oh, I mean Cooper")
-yeet.run(["apt-get upgrade"], shell=True)
-yeet.run("apt-get update")
+        bump = 1       
 
 #***game removal
 joe = input("Ok epic gamer, do you want me to delete gnome-games-common, aisleriot, sudoku, mahjongg, ace-of-penguins, gnomine, and gbrainy? (y/n)")
