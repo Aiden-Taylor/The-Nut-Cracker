@@ -19,7 +19,7 @@ if input("Install bum, forehead? (y/n)") == ("y" or "Y"):
     yeet.run(["apt-get install bum"], shell=False)
 if input("Set up UFW, brick? (y/n)") == ("y" or "Y"):
     print("Installing and enabling UFW")
-    yeet.run(["apt-get ufw"], shell=False)
+    yeet.run(["apt-get install ufw"], shell=False)
     yeet.run(["ufw enable"], shell=False)
 #admin removal
 if input("Does anyone need to be removed from admin permissions, dummy? (y/n)") == ("y" or "Y"):
@@ -32,6 +32,7 @@ while bump == 0:
 
 #TODO
 '''
+#block ports ftp, vsftpd, 
 #replacing files for pwd policies and ect
 yeet.run(["cp -f [original file] [new file]"], shell=True) #change pass age/complexity in replacement file(s)
 #automatic update stuffs
