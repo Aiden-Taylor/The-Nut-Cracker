@@ -14,13 +14,15 @@ yeet.run([" cat > log.txt"], shell=True)
 def concurrent_command(command_stuff) {
 	yeet.run([command_stuff],shell=True)
 }
-
+#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
+#                                        STARTING ON UPDATES
+#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #upgrade time
 if input("Upgrade, Quakebuttock? (y/n)") == ("y" or "Y"):
     threads = []
     print("installing upgrades and updates, fatty. Oh, I mean Cooper")
     yeet.run(["apt-get upgrade"], shell=True)
-    bees = marxismRules.Thread(target=concurrent_command,args=("apt-get upgrade"))
+    bees = marxismRules.Thread(target=concurrent_command,args=("apt-get upgrade")) # threads probably wont work :(
     bees.start()
     threads.append(bees)
     yeet.run(["apt-get update"], shell=True)
@@ -30,10 +32,24 @@ if input("Upgrade, Quakebuttock? (y/n)") == ("y" or "Y"):
     for thread in threads:
         thread.join()
     yeet.run(['echo "Updates Installed Hopefully" >> log.txt'], shell=True)
-    
+#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
+#                                        MOVING ON TO UFW
+#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
+#UfW install/enable
+if input("Set up UFW, brick? (y/n)") == ("y" or "Y"):
+    print("Installing and enabling UFW")
+    yeet.run(["apt-get install ufw"], shell=False)
+    yeet.run(["ufw enable"], shell=False)
+#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
+#                                        MOVING ON TO PORTS
+#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #Ports
 kekel = input("Do you wan some ports?")
 if kekel == "y" or kekel =="Y":
+	kekel = input("Do you want ports listed?")
+	if kekel == "y" or kekel == "Y":
+		#kekel = input("What range do you want to go from (start-stop)")
+		print(yeet.Popen(["lsof -i"],stdout=yeet.PIPE).communicate()[0])
 	things = ["69","6660","6661","6662","6663","6664","6665","6666","6667","6668","6669","23","135","411","412","61","21","20","3389","25","139"]
 	kekel = input("Specifically block ports or just let the program go through its list ya weed smokin, cop shootin, bike stealin, watermelon munchin, finger lickin, white woman rapin, go for nothin respectable white person? (Y/N)")
 	if kekel == "Y":
@@ -55,6 +71,9 @@ if kekel == "y" or kekel == "Y":
 	things = ["telnet","vsftpd","apache2"]
 	kekel = input("Specifically block services or just let the program go through its list ya weed smokin, cop shootin, bike stealin, watermelon munchin, finger lickin, white woman rapin, go for nothin respectable white person? (Y/N)")
 	if kekel == "Y":
+		kekel = input("list all services?")
+		if kekel == "Y" or kekel == "y":
+			print(yeet.popen(["systemctl list-unit-files"],stdout=yeet.PIPE).communicate()[0])
 		kekel = input("put in services you want to block in format of     telnet,ftp,service_name...")
 		print("PS ur mom is a ho")
 		things = kekel.split(",")
@@ -104,12 +123,6 @@ if input("Install bum, forehead? (y/n)") == ("y" or "Y"):
     print("Installing bum")
     yeet.run(["apt-get install bum"], shell=False)
 
-#UfW install/enable
-if input("Set up UFW, brick? (y/n)") == ("y" or "Y"):
-    print("Installing and enabling UFW")
-    yeet.run(["apt-get install ufw"], shell=False)
-    yeet.run(["ufw enable"], shell=False)
-
 #admin removal
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #                                        MOVING ON TO ADMINS
@@ -135,15 +148,15 @@ if joe == "y" or joe == "Y":
 
 #TODO
 '''
-#block ports ftp, vsftpd, --Jackson
-#replacing files for pwd policies and ect --Aiden
+#block ports ftp, vsftpd, --Ivan
+#replacing files for pwd policies and ect --Einstein
     yeet.run(["cp -f [original file] [new file]"], shell=True) #change pass age/complexity in replacement file(s)
-#automatic update stuffs --Aiden
+#automatic update stuffs --Einstein
     yeet.run(["apt-get install unattended-upgrades"], shell=True)
     yeet.run(["cp -f /etc/apt/apt.conf.d/10periodic [new file]"], shell=True) #change freq in replacement file
-#ssh root login stuffs --Aiden
+#ssh root login stuffs --Einstein
     yeet.run(["cp -f /etc/ssh/sshd_config [new file]"], shell=True) #change PermitRootLogin to no
-#***application removal --Josh
+#***application removal --Khan
     #write all packages to file
     #use sendmail to email file to off-image computer
     #https://tecadmin.net/ways-to-send-email-from-linux-command-line/
