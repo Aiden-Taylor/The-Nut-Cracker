@@ -27,7 +27,7 @@ if kekel == "y" or kekel =="Y":
 kekel = input("u wan some services mr dummy head?")
 if kekel == "y" or kekel == "Y":
 	things = ["telnet","vsftpd","apache2"]
-	kekel = input("Specifically block services or just let the program go through its list ya weed smokin, cop shootin, bike stealin, watermelon munchin, finger lickin, white woman rapin, go for nothin respectable white person? (Y/N)")
+	kekel = input("Specifically block services or just let the program go through its list melon husk? (Y/N)")
 	if kekel == "Y":
 		kekel = input("list all services?")
 		if kekel == "Y" or kekel == "y":
