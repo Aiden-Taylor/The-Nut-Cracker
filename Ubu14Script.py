@@ -53,17 +53,17 @@ if joe = "y" or joe = "Y":
 
 #TODO
 '''
-#block ports ftp, vsftpd, 
-#replacing files for pwd policies and ect
-yeet.run(["cp -f [original file] [new file]"], shell=True) #change pass age/complexity in replacement file(s)
-#automatic update stuffs
-yeet.run(["apt-get install unattended-upgrades"], shell=True)
-yeet.run(["cp -f /etc/apt/apt.conf.d/10periodic [new file]"], shell=True) #change freq in replacement file
-#ssh root login stuffs
-yeet.run(["cp -f /etc/ssh/sshd_config [new file]"], shell=True) #change PermitRootLogin to no
-#***application removal
-#write all packages to file
-#use sendmail to email file to off-image computer
-#https://tecadmin.net/ways-to-send-email-from-linux-command-line/
-#query for package purge
+#block ports ftp, vsftpd, --Jackson
+#replacing files for pwd policies and ect --Aiden
+    yeet.run(["cp -f [original file] [new file]"], shell=True) #change pass age/complexity in replacement file(s)
+#automatic update stuffs --Aiden
+    yeet.run(["apt-get install unattended-upgrades"], shell=True)
+    yeet.run(["cp -f /etc/apt/apt.conf.d/10periodic [new file]"], shell=True) #change freq in replacement file
+#ssh root login stuffs --Aiden
+    yeet.run(["cp -f /etc/ssh/sshd_config [new file]"], shell=True) #change PermitRootLogin to no
+#***application removal --Josh
+    #write all packages to file
+    #use sendmail to email file to off-image computer
+    #https://tecadmin.net/ways-to-send-email-from-linux-command-line/
+    #query for package purge
 '''
