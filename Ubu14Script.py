@@ -27,7 +27,7 @@ if users == "y" or users == "Y":
 while bump == 0:
     x = input("Name of the user, idiot?")
     yeet.run(["userdel", x], shell=False)
-    yeet.run(['echo "User', x,'" >> log.txt'], shell=True)
+    yeet.run(['echo "Omae wa mou shindeiru', x,'" >> log.txt'], shell=True)
     users = input("Does another user need to be removed, booger connoisseur? (y/n)")
     if users != "y" and users != "Y":
         bump = 1
@@ -92,4 +92,7 @@ if joe = "y" or joe = "Y":
     #use sendmail to email file to off-image computer
     #https://tecadmin.net/ways-to-send-email-from-linux-command-line/
     #query for package purge
+ #query for adding groups 
+ #disable guest
+ 
 '''
