@@ -15,7 +15,9 @@ yeet.run(["apt list --installed | less >> yeeters.txt"], shell=True)
 yeet.run(["sendmail joshua.reddy@rocklinusd.org  < yeeters.txt"], shell=True)
 
 while bump == 0:
-    yeet.run(["apt-get purge", input("Frickin Name of the package, bill?")], shell=False)
+    yeet.run(["apt-get --purge remove", input("Frickin Name of the package, bill?")], shell=False)
+    
+    #yeet.run(["Y")], shell=False)
     users = input("Does another fucker need to be removed,ass_man? (y/n)")
     if users != "y" and users != "Y":
         bump = 1
