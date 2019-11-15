@@ -22,7 +22,7 @@ if input("Upgrade, Quakebuttock? (y/n)") == ("y" or "Y"):
     threads = []
     print("installing upgrades and updates, fatty. Oh, I mean Cooper")
     yeet.run(["apt-get upgrade"], shell=True)
-    bees = marxismRules.Thread(target=concurrent_command,args=("apt-get upgrade")) # threads probably wont work :(
+    '''bees = marxismRules.Thread(target=concurrent_command,args=("apt-get upgrade")) # threads probably wont work :(
     bees.start()
     threads.append(bees)
     yeet.run(["apt-get update"], shell=True)
@@ -30,7 +30,7 @@ if input("Upgrade, Quakebuttock? (y/n)") == ("y" or "Y"):
     bees.start()
     threads.append(bees)
     for thread in threads:
-        thread.join()
+        thread.join()'''
     yeet.run(['echo "Updates Installed Hopefully" >> log.txt'], shell=True)
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #                                        MOVING ON TO UFW
@@ -52,7 +52,7 @@ if kekel == "y" or kekel =="Y":
 		print(yeet.Popen(["lsof -i"],stdout=yeet.PIPE).communicate()[0])
 	things = ["69","6660","6661","6662","6663","6664","6665","6666","6667","6668","6669","23","135","411","412","61","21","20","3389","25","139"]
 	kekel = input("Specifically block ports or just let the program go through its list ya weed smokin, cop shootin, bike stealin, watermelon munchin, finger lickin, white woman rapin, go for nothin respectable white person? (Y/N)")
-	if kekel == "Y":
+	if kekel == ("Y" or "y")n:
 		kekel = input("put in ports you want to block in format of     10,23,22,80... its pretty sad i need to explicitly state this, really goes to show the amount of brain cells you have")
 		things = kekel.split(",")
 	for port in things: 
@@ -99,6 +99,13 @@ while bump == 0:
     users = input("Does another user need to be removed, booger connoisseur? (y/n)")
     if users != "y" and users != "Y":
         bump = 1
+#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
+#                                        MOVING ON TO PASSWORDS
+#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
+if input('Change all passwords to "Your%Mom%Is%Fucking%Gay69&420? (y/n)"' == ("y" or "Y"):
+	 yeet.run(["cut -d: -f1 /etc/passwd | wc -l"], shell=True)
+	 for i in input("What number did the shell just display, you glorified TI-84?"):
+	 	
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #                                        MOVING ON TO PACKAGES
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
