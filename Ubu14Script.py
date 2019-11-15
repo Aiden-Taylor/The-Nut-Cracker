@@ -31,6 +31,7 @@ if input("Upgrade, Quakebuttock? (y/n)") == ("y" or "Y"):
     threads = []
     print("installing upgrades and updates, fatty. Oh, I mean Cooper")
     yeet.Popen(["apt-get upgrade"], shell=True)
+    sleep(30)
     '''bees = marxismRules.Thread(target=concurrent_command,args=("apt-get upgrade")) # threads probably wont work :(
     bees.start()
     threads.append(bees)
@@ -56,6 +57,7 @@ if input("Yeet Guest? (y/n)") == ("y" or "Y"):
 if input("Set up UFW, brick? (y/n)") == ("y" or "Y"):
     print("Installing and enabling UFW")
     yeet.Popen(["apt-get install ufw"], shell=False)
+    sleep(10)
     yeet.Popen(["ufw enable"], shell=False)
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #                                        MOVING ON TO PORTS
@@ -146,6 +148,7 @@ while bump == 0:
 
 while bump == 0:
     yeet.Popen(["apt-get install ", input("Frickin Name of the package, bob?")], shell=False)
+    sleep(10)
     
     #yeet.Popen(["Y")], shell=False)
     users = input("Does another sob need to be added, dishwasher? (y/n)")
@@ -157,6 +160,7 @@ while bump == 0:
 if input("Install bum, forehead? (y/n)") == ("y" or "Y"):
     print("Installing bum")
     yeet.Popen(["apt-get install bum"], shell=False)
+    sleep(10)
 
 #admin removal
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
@@ -175,11 +179,14 @@ while bump == 0:
 #***game removal
 joe = input("Ok epic gamer, do you want me to delete gnome-games-common, aisleriot, sudoku, mahjongg, ace-of-penguins, gnomine, and gbrainy? (y/n)")
 if joe == "y" or joe == "Y":
-  yeet.Popen(["sudo apt-get purge gnome-games-common gbrainy && sudo apt-get autoremove"], shell=True)
-  yeet.Popen(["sudo apt-get purge aisleriot gnome-sudoku mahjongg ace-of-penguins gnomine gbrainy"], shell=True)
+  yeet.Popen(["apt-get purge gnome-games-common gbrainy && apt-get autoremove"], shell=True)
+  sleep(30)
+  yeet.Popen(["apt-get purge aisleriot gnome-sudoku mahjongg ace-of-penguins gnomine gbrainy"], shell=True)
+  sleep(30)
 joe = input("Any uncommon games to remove, my zooma? (y/n)")
 if joe == "y" or joe == "Y":
-  yeet.Popen(["sudo apt-get purge", input("What's the game package name, ear banger?")], shell=False)
+  yeet.Popen(["apt-get purge", input("What's the game package name, ear banger?")], shell=False)
+  sleep(30)
 
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #                                        MOVING ON TO VIRUS SCANNING
@@ -187,20 +194,21 @@ if joe == "y" or joe == "Y":
 ilovejackson = input("Jackson is going to be very mad if you don't search for viruses... do it now? (y/n)")
 if ilovejackson.lower() == "y":
     print("Installing necessary software...")
-    yeet.Popen(["sudo apt install chkrootkit rkhunter lynis clamav-freshclam"], shell=True)
+    yeet.Popen(["apt install chkrootkit rkhunter lynis clamav-freshclam"], shell=True)
     print("Running chkrootkit...")
-    yeet.Popen(["sudo chkrootkit -q"], shell=True)
+    sleep(15)
+    yeet.Popen(["chkrootkit -q"], shell=True)
     print("Running rkhunter...")
-    yeet.Popen(["sudo rkhunter --update"], shell=True)
-    yeet.Popen(["sudo rkhunter --propupd"], shell=True)
-    yeet.Popen(["sudo rkhunter -c --enable all --disable none"], shell=True)
+    yeet.Popen(["rkhunter --update"], shell=True)
+    yeet.Popen(["rkhunter --propupd"], shell=True)
+    yeet.Popen(["rkhunter -c --enable all --disable none"], shell=True)
     print("Running lynis...")
     yeet.Popen(["cd /usr/share/lynis/"], shell=True)
     yeet.Popen(["/usr/share/lynis/lynis audit system"], shell=True)
     print("Running CLAMAV")
-    yeet.Popen(["sudo systemctl stop clamav-freshclam"], shell=True)
-    yeet.Popen(["sudo freshclam --stdout"], shell=True)
-    yeet.Popen(["sudo systemctl start clamav-freshclam"], shell=True)
+    yeet.Popen(["systemctl stop clamav-freshclam"], shell=True)
+    yeet.Popen(["freshclam --stdout"], shell=True)
+    yeet.Popen(["systemctl start clamav-freshclam"], shell=True)
     yeet.Popen(["clamscan -r -i --stdout --exclude-dir=\"^/sys\""], shell=True)
     print("Scanning done... Jackson is very happy :)")
 
