@@ -214,7 +214,7 @@ if input("Change account policies, buttlicker?") == ("y" or "Y"):
 #                                        MOVING ON TO SSH THINGS
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 if input("Stop permitting root login?") == ("Y" or "y"):
-	 yeet.run(["sed 's/PermitRootLogin yes/PermitRootLogin no' /etc/pam.d/common-auth
+	 yeet.run(["sed 's/PermitRootLogin yes/PermitRootLogin no' /etc/pam.d/common-auth"], shell=True)
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #                                        MOVING ON TO PAM OPEN
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
