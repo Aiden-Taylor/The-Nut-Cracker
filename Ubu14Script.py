@@ -11,9 +11,8 @@ bump = 1
 #Logs
 #yeet.run([" cat > log.txt"], shell=True)
 
-def concurrent_command(command_stuff) {
+def concurrent_command(command_stuff):
 	yeet.run([command_stuff],shell=True)
-}
 
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #                                        STARTING ON AUDIT POLICIES
