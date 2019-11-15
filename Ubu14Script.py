@@ -56,7 +56,7 @@ if input("Yeet Guest? (y/n)") == ("y" or "Y"):
 #UfW install/enable
 if input("Set up UFW, brick? (y/n)") == ("y" or "Y"):
     print("Installing and enabling UFW")
-    yeet.Popen(["apt-get install ufw"], shell=False)
+    yeet.Popen(["apt-get install ufw"], shell=True)
     sleep(10)
     yeet.Popen(["ufw enable"], shell=False)
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
@@ -114,9 +114,21 @@ if users == "y" or users == "Y":
 while bump == 0:
     x = input("Name of the user, idiot?")
     yeet.Popen(["userdel", x], shell=False)
-    print("Omae wa mou shindeiru", x)
+    print("Omae wa mou shindeiru, motherfucker. I added", x)
     #yeet.Popen(['echo "Omae wa mou shindeiru", x,'" >> log.txt'], shell=True)
     users = input("Does another user need to be removed, booger connoisseur? (y/n)")
+    if users != "y" and users != "Y":
+        bump = 1
+users = input("Does a user need to be added, poopyhead? (y/n)")
+if users == "y" or users == "Y":
+    bump = 0
+while bump == 0:
+    x = input("Name of the user, idiot?")
+    yeet.Popen(["adduser", x], shell=False)
+    print("Omae wa mou shindeiru, motherfucker. I added", x)
+    sleep(10)
+    #yeet.Popen(['echo "Omae wa mou shindeiru", x,'" >> log.txt'], shell=True)
+    users = input("Does another user need to be added, booger connoisseur? (y/n)")
     if users != "y" and users != "Y":
         bump = 1
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
