@@ -153,6 +153,30 @@ joe = input("Any uncommon games to remove, my zooma? (y/n)")
 if joe == "y" or joe == "Y":
   yeet.run(["sudo apt-get purge", input("What's the game package name, ear banger?")], shell=False)
 
+#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
+#                                        MOVING ON TO VIRUS SCANNING
+#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
+ilovejackson = input("Jackson is going to be very mad if you don't search for viruses... do it now? (y/n)")
+if ilovejackson.lower() == "y":
+    print("Installing necessary software...")
+    yeet.run(["sudo apt install chkrootkit rkhunter lynis clamav-freshclam"], shell=True)
+    print("Running chkrootkit...")
+    yeet.run(["sudo chkrootkit -q"], shell=True)
+    print("Running rkhunter...")
+    yeet.run(["sudo rkhunter --update"], shell=True)
+    yeet.run(["sudo rkhunter --propupd"], shell=True)
+    yeet.run(["sudo rkhunter -c --enable all --disable none"], shell=True)
+    print("Running lynis...")
+    yeet.run(["cd /usr/share/lynis/"], shell=True)
+    yeet.run(["/usr/share/lynis/lynis audit system"], shell=True)
+    print("Running CLAMAV")
+    yeet.run(["sudo systemctl stop clamav-freshclam"], shell=True)
+    yeet.run(["sudo freshclam --stdout"], shell=True)
+    yeet.run(["sudo systemctl start clamav-freshclam"], shell=True)
+    yeet.run(["clamscan -r -i --stdout --exclude-dir=\"^/sys\""], shell=True)
+    print("Scanning done... Jackson is very happy :)")
+
+
 #TODO
 '''
 #block ports ftp, vsftpd, --Ivan
