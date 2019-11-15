@@ -69,7 +69,7 @@ if kekel == "y" or kekel =="Y":
 		print(yeet.Popen(["lsof -i"],stdout=yeet.PIPE).communicate()[0])
 	things = ["69","6660","6661","6662","6663","6664","6665","6666","6667","6668","6669","23","135","411","412","61","21","20","3389","25","139"]
 	kekel = input("Specifically block ports or just let the program go through its list ya weed smokin, cop shootin, bike stealin, watermelon munchin, finger lickin, white woman rapin, go for nothin respectable white person? (Y/N)")
-	if kekel == ("Y" or "y")n:
+	if kekel == ("Y" or "y"):
 		kekel = input("put in ports you want to block in format of     10,23,22,80... its pretty sad i need to explicitly state this, really goes to show the amount of brain cells you have")
 		things = kekel.split(",")
 	for port in things: 
