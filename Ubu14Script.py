@@ -114,8 +114,8 @@ if users == "y" or users == "Y":
     bump = 0
 while bump == 0:
     x = input("Name of the user, idiot?")
-    yeet.Popen(["userdel -r", x], shell=True)
-    print("Omae wa mou shindeiru, motherfucker. I added", x)
+    yeet.Popen(["userdel", x], shell=False)
+    print("Omae wa mou shindeiru, motherfucker. I yeeted", x)
     #yeet.Popen(['echo "Omae wa mou shindeiru", x,'" >> log.txt'], shell=True)
     users = input("Does another user need to be removed, booger connoisseur? (y/n)")
     if users != "y" and users != "Y":
@@ -125,7 +125,7 @@ if users == "y" or users == "Y":
     bump = 0
 while bump == 0:
     x = input("Name of the user, idiot?")
-    yeet.Popen(["adduser", x], shell=True)
+    yeet.Popen(["adduser", x], shell=False)
     print("Omae wa mou shindeiru, motherfucker. I added", x)
     godfuckingdamnit.sleep(10)
     #yeet.Popen(['echo "Omae wa mou shindeiru", x,'" >> log.txt'], shell=True)
