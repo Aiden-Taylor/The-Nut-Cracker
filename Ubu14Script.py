@@ -9,7 +9,7 @@ print("Also, pay homage to Aiden, he is about to get you fat points")
 bump = 1
 
 #Logs
-yeet.run([" cat > log.txt"], shell=True)
+#yeet.run([" cat > log.txt"], shell=True)
 
 def concurrent_command(command_stuff) {
 	yeet.run([command_stuff],shell=True)
@@ -42,6 +42,14 @@ if input("Upgrade, Quakebuttock? (y/n)") == ("y" or "Y"):
     for thread in threads:
         thread.join()'''
     yeet.run(['echo "Updates Installed Hopefully" >> log.txt'], shell=True)
+
+
+#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
+#                                        STARTING ON Guest Acsess Deny POLICIES
+#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
+if input("Yeet Guest? (y/n)") == ("y" or "Y"):
+	yeet.run(["/usr/lib/lightdm/lightdm-set-defaults -l false"], shell=True)
+
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #                                        MOVING ON TO UFW
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
@@ -123,10 +131,11 @@ if input('Change all passwords to "Your%Mom%Is%Fucking%Gay69&420? (y/n)"' == ("y
 users = input("What  (y/n)")
 if users == "y" or users == "Y":
     bump = 0
- 
-yeet.run([" cat > yeeters.txt"], shell=True)
+
+	 #Mail Stuff
+"""yeet.run([" cat > yeeters.txt"], shell=True)
 yeet.run(["apt list --installed | less >> yeeters.txt"], shell=True)
-yeet.run(["sendmail joshua.reddy@rocklinusd.org  < yeeters.txt"], shell=True)
+yeet.run(["sendmail joshua.reddy@rocklinusd.org  < yeeters.txt"], shell=True)"""
 
 while bump == 0:
     yeet.run(["apt-get --purge remove", input("Frickin Name of the package, bill?")], shell=False)
@@ -135,6 +144,16 @@ while bump == 0:
     users = input("Does another fucker need to be removed,ass_man? (y/n)")
     if users != "y" and users != "Y":
         bump = 1
+
+while bump == 0:
+    yeet.run(["apt-get install ", input("Frickin Name of the package, bob?")], shell=False)
+    
+    #yeet.run(["Y")], shell=False)
+    users = input("Does another sob need to be added, dishwasher? (y/n)")
+    if users != "y" and users != "Y":
+        bump = 1
+	 
+	 
 #bum daemon install
 if input("Install bum, forehead? (y/n)") == ("y" or "Y"):
     print("Installing bum")
