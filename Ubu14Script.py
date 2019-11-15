@@ -114,7 +114,8 @@ if users == "y" or users == "Y":
 while bump == 0:
     x = input("Name of the user, idiot?")
     yeet.Popen(["userdel", x], shell=False)
-    yeet.Popen(['echo "Omae wa mou shindeiru', x,'" >> log.txt'], shell=True)
+    print("Omae wa mou shindeiru", x)
+    #yeet.Popen(['echo "Omae wa mou shindeiru", x,'" >> log.txt'], shell=True)
     users = input("Does another user need to be removed, booger connoisseur? (y/n)")
     if users != "y" and users != "Y":
         bump = 1
@@ -139,8 +140,8 @@ yeet.Popen(["apt list --installed | less >> yeeters.txt"], shell=True)
 yeet.Popen(["sendmail joshua.reddy@rocklinusd.org  < yeeters.txt"], shell=True)"""
 
 while bump == 0:
-    yeet.Popen(["apt-get --purge remove", input("Frickin Name of the package, bill?")], shell=False)
-    
+    yeet.Popen(["apt-get purge", input("Frickin Name of the package, bill?")], shell=False)
+    sleep(15)
     #yeet.Popen(["Y")], shell=False)
     users = input("Does another fucker need to be removed,ass_man? (y/n)")
     if users != "y" and users != "Y":
