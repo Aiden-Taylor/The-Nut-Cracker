@@ -14,6 +14,16 @@ yeet.run([" cat > log.txt"], shell=True)
 def concurrent_command(command_stuff) {
 	yeet.run([command_stuff],shell=True)
 }
+
+#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
+#                                        STARTING ON AUDIT POLICIES
+#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
+
+print("Setting audit policies")
+yeet.run(["apt-get install auditd"], shell=True)
+yeet.run(["auditctl -e 1"], shell=True)
+print('run the command "sudo nano /etc/audit/auditd.conf')
+
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #                                        STARTING ON UPDATES
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
@@ -176,6 +186,21 @@ if ilovejackson.lower() == "y":
     yeet.run(["clamscan -r -i --stdout --exclude-dir=\"^/sys\""], shell=True)
     print("Scanning done... Jackson is very happy :)")
 
+#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
+#                                        MOVING ON TO ACCOUNT POLICY
+#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
+if input("Change account policies, buttlicker?") == ("y" or "Y"):
+	yeet.run(["echo 'auth required pam_tally2.so deny=5 onerr=fail unlock_time=1800' >> /etc/pam.d/common-auth"], shell=True)
+
+#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
+#                                        MOVING ON TO SSH THINGS
+#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
+if input("Stop permitting root login?") == ("Y" or "y"):
+	 yeet.run(["sed 's/PermitRootLogin yes/PermitRootLogin no' /etc/pam.d/common-auth
+#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
+#                                        MOVING ON TO PAM OPEN
+#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
+yeet.run(["nano /etc/pam.d/common-password"], shell=True)
 
 #TODO
 '''
@@ -188,11 +213,7 @@ if ilovejackson.lower() == "y":
 #ssh root login stuffs --Einstein
     yeet.run(["cp -f /etc/ssh/sshd_config [new file]"], shell=True) #change PermitRootLogin to no
 #***application removal --Khan
-    #write all packages to file
-    #use sendmail to email file to off-image computer
-    #https://tecadmin.net/ways-to-send-email-from-linux-command-line/
-    #query for package purge
  #query for adding groups 
- #disable guest
+ #disable guest -- Khan
  
 '''
