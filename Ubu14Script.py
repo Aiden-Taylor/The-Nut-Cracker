@@ -4,6 +4,7 @@
 
 import subprocess as yeet
 import threading as marxismRules
+import time as godfuckingdamnit
 print("Welcome to Aiden's Nut Cracker, better check your cup")
 print("Also, pay homage to Aiden, he is about to get you fat points")
 bump = 1
@@ -31,7 +32,7 @@ if input("Upgrade, Quakebuttock? (y/n)") == ("y" or "Y"):
     threads = []
     print("installing upgrades and updates, fatty. Oh, I mean Cooper")
     yeet.Popen(["apt-get upgrade"], shell=True)
-    sleep(30)
+    godfuckingdamnit.sleep(30)
     '''bees = marxismRules.Thread(target=concurrent_command,args=("apt-get upgrade")) # threads probably wont work :(
     bees.start()
     threads.append(bees)
@@ -57,7 +58,7 @@ if input("Yeet Guest? (y/n)") == ("y" or "Y"):
 if input("Set up UFW, brick? (y/n)") == ("y" or "Y"):
     print("Installing and enabling UFW")
     yeet.Popen(["apt-get install ufw"], shell=True)
-    sleep(10)
+    godfuckingdamnit.sleep(10)
     yeet.Popen(["ufw enable"], shell=False)
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #                                        MOVING ON TO PORTS
@@ -113,7 +114,7 @@ if users == "y" or users == "Y":
     bump = 0
 while bump == 0:
     x = input("Name of the user, idiot?")
-    yeet.Popen(["userdel", x], shell=False)
+    yeet.Popen(["userdel -r", x], shell=False)
     print("Omae wa mou shindeiru, motherfucker. I added", x)
     #yeet.Popen(['echo "Omae wa mou shindeiru", x,'" >> log.txt'], shell=True)
     users = input("Does another user need to be removed, booger connoisseur? (y/n)")
@@ -126,7 +127,7 @@ while bump == 0:
     x = input("Name of the user, idiot?")
     yeet.Popen(["adduser", x], shell=False)
     print("Omae wa mou shindeiru, motherfucker. I added", x)
-    sleep(10)
+    godfuckingdamnit.sleep(10)
     #yeet.Popen(['echo "Omae wa mou shindeiru", x,'" >> log.txt'], shell=True)
     users = input("Does another user need to be added, booger connoisseur? (y/n)")
     if users != "y" and users != "Y":
@@ -153,7 +154,7 @@ yeet.Popen(["sendmail joshua.reddy@rocklinusd.org  < yeeters.txt"], shell=True)"
 
 while bump == 0:
     yeet.Popen(["apt-get purge", input("Frickin Name of the package, bill?")], shell=False)
-    sleep(15)
+    godfuckingdamnit.sleep(15)
     #yeet.Popen(["Y")], shell=False)
     users = input("Does another fucker need to be removed,ass_man? (y/n)")
     if users != "y" and users != "Y":
@@ -161,7 +162,7 @@ while bump == 0:
 
 while bump == 0:
     yeet.Popen(["apt-get install ", input("Frickin Name of the package, bob?")], shell=False)
-    sleep(10)
+    godfuckingdamnit.sleep(10)
     
     #yeet.Popen(["Y")], shell=False)
     users = input("Does another sob need to be added, dishwasher? (y/n)")
@@ -173,7 +174,7 @@ while bump == 0:
 if input("Install bum, forehead? (y/n)") == ("y" or "Y"):
     print("Installing bum")
     yeet.Popen(["apt-get install bum"], shell=False)
-    sleep(10)
+    godfuckingdamnit.sleep(10)
 
 #admin removal
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
@@ -193,13 +194,13 @@ while bump == 0:
 joe = input("Ok epic gamer, do you want me to delete gnome-games-common, aisleriot, sudoku, mahjongg, ace-of-penguins, gnomine, and gbrainy? (y/n)")
 if joe == "y" or joe == "Y":
   yeet.Popen(["apt-get purge gnome-games-common gbrainy && apt-get autoremove"], shell=True)
-  sleep(30)
+  godfuckingdamnit.sleep(30)
   yeet.Popen(["apt-get purge aisleriot gnome-sudoku mahjongg ace-of-penguins gnomine gbrainy"], shell=True)
-  sleep(30)
+  godfuckingdamnit.sleep(30)
 joe = input("Any uncommon games to remove, my zooma? (y/n)")
 if joe == "y" or joe == "Y":
   yeet.Popen(["apt-get purge", input("What's the game package name, ear banger?")], shell=False)
-  sleep(30)
+  godfuckingdamnit.sleep(30)
 
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #                                        MOVING ON TO VIRUS SCANNING
@@ -209,7 +210,7 @@ if ilovejackson.lower() == "y":
     print("Installing necessary software...")
     yeet.Popen(["apt install chkrootkit rkhunter lynis clamav-freshclam"], shell=True)
     print("Running chkrootkit...")
-    sleep(15)
+    godfuckingdamnit.sleep(15)
     yeet.Popen(["chkrootkit -q"], shell=True)
     print("Running rkhunter...")
     yeet.Popen(["rkhunter --update"], shell=True)
