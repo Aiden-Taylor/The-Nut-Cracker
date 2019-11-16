@@ -143,7 +143,7 @@ while bump == 0:
 #                                        MOVING ON TO PACKAGES
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #package-removal
-users = input("What  (y/n)")
+users = input("Remove Packages? (y/n)")
 if users == "y" or users == "Y":
     bump = 0
 
@@ -153,7 +153,7 @@ yeet.Popen(["apt list --installed | less >> yeeters.txt"], shell=True)
 yeet.Popen(["sendmail joshua.reddy@rocklinusd.org  < yeeters.txt"], shell=True)"""
 
 while bump == 0:
-    yeet.Popen(['read -p "Does another fucker need to be removed, ass_man" assman'], shell=True)
+    yeet.Popen(['read -p "Name of the thingy, ass_man" assman'], shell=True)
     yeet.Popen(['apt-get purge $assman'], shell=True)
     godfuckingdamnit.sleep(15)
     #yeet.Popen(["Y")], shell=False)
