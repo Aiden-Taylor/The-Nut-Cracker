@@ -113,7 +113,7 @@ users = input("Does a user need to be removed, fart sniffer? (y/n)")
 if users == "y" or users == "Y":
     bump = 0
 while bump == 0:
-    yeet.Popen(["python3 ./Userrem.sub"], shell=True)
+    yeet.Popen(["python3 ./Userremsub.py"], shell=True)
     godfuckingdamnit.sleep(1)
     users = input("Does another user need to be removed, booger connoisseur? (y/n)")
     if users != "y" and users != "Y":
@@ -123,7 +123,7 @@ users = input("Does a user need to be added, poopyhead? (y/n)")
 if users == "y" or users == "Y":
     bump = 0
 while bump == 0:
-    yeet.Popen(["python3 ./Useradd.sub"], shell=True)
+    yeet.Popen(["python3 ./Useraddsub.py"], shell=True)
     godfuckingdamnit.sleep(1)
     users = input("Does a user need to be added, poopyhead? (y/n)")
     if users != ("Y" and "y"):
