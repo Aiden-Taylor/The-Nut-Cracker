@@ -8,3 +8,4 @@ else
        userdel -rf "$userrem"
        echo "Omae wa mou shindeiru, motherfucker. I yeeted $userrem"
 fi
+[ $? -eq 0 ] && echo "$userrem has been removed from system!" || echo "Failed to remove a user!"
