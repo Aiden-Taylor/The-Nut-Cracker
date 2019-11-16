@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 read -p "User to be removed? userrem
 user_exists=$(getent passwd $userrem)
-if [[ -z "$user_exists" ]]
+if [ -z "$user_exists" ] ;
 then
        echo "User $userrem does not exist"
 else
