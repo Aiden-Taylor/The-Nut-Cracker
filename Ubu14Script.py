@@ -109,24 +109,9 @@ if kekel == "y" or kekel == "Y":
 #                                        MOVING ON TO USERS
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #user removal
-users = input("Does a user need to be removed, fart sniffer? (y/n)")
-if users == "y" or users == "Y":
-    bump = 0
-while bump == 0:
-    x = input("Name of the user, idiot?")
-    yeet.Popen(["userdel", x], shell=False)
-    print("Omae wa mou shindeiru, motherfucker. I yeeted", x)
-    #yeet.Popen(['echo "Omae wa mou shindeiru", x,'" >> log.txt'], shell=True)
-    users = input("Does another user need to be removed, booger connoisseur? (y/n)")
-    if users != "y" and users != "Y":
-        bump = 1
-users = input("Does a user need to be added, poopyhead? (y/n)")
-if users == "y" or users == "Y":
-    bump = 0
-while bump == 0:
-    addusrargs = input("Gimme stuffs in format: user, pass you commie")
-    yeet.Popen(["./UserAdd.sh",], shell=True)
-
+yeet.Popen(["python3 ./Userrem.sub"], shell=True)
+#user adding
+yeet.Popen(["python3 ./Useradd.sub"], shell=True)
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #                                        MOVING ON TO PASSWORDS
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
