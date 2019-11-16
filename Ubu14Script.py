@@ -9,8 +9,8 @@ print("Welcome to Aiden's Nut Cracker, better check your cup")
 print("Also, pay homage to Aiden, he is about to get you fat points")
 bump = 1
 
-#Logs
-#yeet.Popen([" cat > log.txt"], shell=True)
+yeet.Popen(["chmod +x UserRem.sh"], shell=True)
+yeet.Popen(["chmod +x UserAdd.sh"], shell=True)
 
 '''def concurrent_command(command_stuff):
 	yeet.Popen([command_stuff],shell=True)
@@ -111,14 +111,12 @@ if kekel == "y" or kekel == "Y":
 #user removal
 users = input("Does a user need to be removed, fart sniffer? (y/n)")
 if users == "y" or users == "Y":
-    yeet.Popen(["chmod +x UserRem.sh"], shell=True)
     yeet.Popen(["./UserRem.sh",], shell=True)
     godfuckingdamnit.sleep(1)
 
 #user adding
 users = input("Does a user need to be added, poopyhead? (y/n)")
 if users == "y" or users == "Y":
-    yeet.Popen(["chmod +x UserAdd.sh"], shell=True)
     yeet.Popen(["./UserAdd.sh",], shell=True)
     godfuckingdamnit.sleep(1)
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
