@@ -12,6 +12,9 @@ bump = 1
 #Logs
 #yeet.Popen([" cat > log.txt"], shell=True)
 
+#making bash(s) executable
+yeet.Popen(["chmod +x UserAdd.sh"], shell=True)
+
 '''def concurrent_command(command_stuff):
 	yeet.Popen([command_stuff],shell=True)
 '''
@@ -124,22 +127,9 @@ users = input("Does a user need to be added, poopyhead? (y/n)")
 if users == "y" or users == "Y":
     bump = 0
 while bump == 0:
-    x = input("Name of the user, idiot?")
-    yeet.Popen(["adduser", x], shell=False)
-    yeet.Popen(["12345"], shell=True)
-    yeet.Popen(["12345"], shell=True)
-    yeet.Popen([], shell=True)
-    yeet.Popen([], shell=True)
-    yeet.Popen([], shell=True)
-    yeet.Popen([], shell=True)
-    yeet.Popen([], shell=True)
-    yeet.Popen(["y"], shell=True)
-    print("Omae wa mou shindeiru, motherfucker. I added", x)
-    godfuckingdamnit.sleep(3)
-    #yeet.Popen(['echo "Omae wa mou shindeiru", x,'" >> log.txt'], shell=True)
-    users = input("Does another user need to be added, booger connoisseur? (y/n)")
-    if users != "y" and users != "Y":
-        bump = 1
+    addusrargs = input("Gimme stuffs in format: user, pass you commie")
+    yeet.Popen(["./AddUser.sh", addusrargs], shell=False)
+
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #                                        MOVING ON TO PASSWORDS
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
