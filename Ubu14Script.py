@@ -153,7 +153,7 @@ yeet.Popen(["apt list --installed | less >> yeeters.txt"], shell=True)
 yeet.Popen(["sendmail joshua.reddy@rocklinusd.org  < yeeters.txt"], shell=True)"""
 
 while bump == 0:
-    yeet.Popen(["apt-get purge", input("Frickin Name of the package, bill?")], shell=False)
+    yeet.Popen(["apt-get purge", input("Frickin Name of the package, bill?")], shell=True)
     godfuckingdamnit.sleep(15)
     #yeet.Popen(["Y")], shell=False)
     users = input("Does another fucker need to be removed,ass_man? (y/n)")
@@ -161,7 +161,7 @@ while bump == 0:
         bump = 1
 
 while bump == 0:
-    yeet.Popen(["apt-get install ", input("Frickin Name of the package, bob?")], shell=False)
+    yeet.Popen(["apt-get install ", input("Frickin Name of the package, bob?")], shell=True)
     godfuckingdamnit.sleep(10)
     
     #yeet.Popen(["Y")], shell=False)
@@ -173,7 +173,7 @@ while bump == 0:
 #bum daemon install
 if input("Install bum, forehead? (y/n)") == ("y" or "Y"):
     print("Installing bum")
-    yeet.Popen(["apt-get install bum"], shell=False)
+    yeet.Popen(["apt-get install bum"], shell=True)
     godfuckingdamnit.sleep(10)
 
 #admin removal
@@ -196,10 +196,6 @@ if joe == "y" or joe == "Y":
   yeet.Popen(["apt-get purge gnome-games-common gbrainy && apt-get autoremove"], shell=True)
   godfuckingdamnit.sleep(30)
   yeet.Popen(["apt-get purge aisleriot gnome-sudoku mahjongg ace-of-penguins gnomine gbrainy"], shell=True)
-  godfuckingdamnit.sleep(30)
-joe = input("Any uncommon games to remove, my zooma? (y/n)")
-if joe == "y" or joe == "Y":
-  yeet.Popen(["apt-get purge", input("What's the game package name, ear banger?")], shell=False)
   godfuckingdamnit.sleep(30)
 
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
