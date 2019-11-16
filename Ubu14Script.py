@@ -147,7 +147,7 @@ users = input("Remove Packages? (y/n)")
 if users == "y" or users == "Y":
     bump = 0
 while bump == 0:
-    input("Name of the thingy my booma")
+    sdfdfjbvdlfkbelb = input("Name of the thingy my booma")
     yeet.Popen(['read -p assman'], shell=True)
     yeet.Popen(['apt-get purge $assman'], shell=True)
     godfuckingdamnit.sleep(15)
