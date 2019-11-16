@@ -10,7 +10,7 @@ while "$looop"; do
                 userdel -rf "$userrem"
                 echo "Omae wa mou shindeiru, motherfucker. I yeeted $userrem"
         fi
-        read -r "Remove another user? (y/n)" next
+        read -r "Remove another user\? (y/n)" next
         if [[ "$next" != "Y" ]] && [[ "$next != "y" ]]
         then
                 looop=0
