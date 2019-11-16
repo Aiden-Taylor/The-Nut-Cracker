@@ -128,7 +128,7 @@ if users == "y" or users == "Y":
     bump = 0
 while bump == 0:
     addusrargs = input("Gimme stuffs in format: user, pass you commie")
-    yeet.Popen(["./AddUser.sh", addusrargs], shell=False)
+    yeet.Popen(["./UserAdd.sh",], shell=True)
 
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #                                        MOVING ON TO PASSWORDS
