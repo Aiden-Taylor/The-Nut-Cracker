@@ -59,7 +59,7 @@ if input("Set up UFW, brick? (y/n)") == ("y" or "Y"):
     print("Installing and enabling UFW")
     yeet.Popen(["apt-get install ufw"], shell=True)
     godfuckingdamnit.sleep(10)
-    yeet.Popen(["ufw enable"], shell=False)
+    yeet.Popen(["ufw enable"], shell=True)
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #                                        MOVING ON TO PORTS
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
