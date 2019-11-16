@@ -12,9 +12,6 @@ bump = 1
 #Logs
 #yeet.Popen([" cat > log.txt"], shell=True)
 
-#making bash(s) executable
-yeet.Popen(["chmod +x UserAdd.sh"], shell=True)
-
 '''def concurrent_command(command_stuff):
 	yeet.Popen([command_stuff],shell=True)
 '''
