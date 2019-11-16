@@ -42,7 +42,6 @@ if input("Upgrade, Quakebuttock? (y/n)") == ("y" or "Y"):
     threads.append(bees)
     for thread in threads:
         thread.join()'''
-    yeet.Popen(['echo "Updates Installed Hopefully" >> log.txt'], shell=True)
 
 
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
@@ -105,59 +104,6 @@ if kekel == "y" or kekel == "Y":
 		print("Service " + service + " has been blocked :)")
 		yeet.Popen(['echo "Service '+service+' is blocked" >> log.txt'],shell=False)
 	yeet.Popen(['echo "Services done just like ur mom" >> log.txt'],shell=False)
-#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
-#                                        MOVING ON TO USERS
-#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
-#user removal
-users = input("Does a user need to be removed, fart sniffer? (y/n)")
-if users == "y" or users == "Y":
-    yeet.Popen(["./UserRem.sh",], shell=True)
-    godfuckingdamnit.sleep(1)
-
-#user adding
-users = input("Does a user need to be added, poopyhead? (y/n)")
-if users == "y" or users == "Y":
-    yeet.Popen(["./UserAdd.sh",], shell=True)
-    godfuckingdamnit.sleep(1)
-#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
-#                                        MOVING ON TO PASSWORDS
-#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
-'''if input('Change all passwords to "Your%Mom&Is&Fucking&Gay69&420? (y/n)"' == ("y" or "Y"):
-	 yeet.Popen(["cut -d: -f1 /etc/passwd | wc -l"], shell=True)
-	 for i in input("What number did the shell just display, you glorified TI-84?"):
-'''	 	
-#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
-#                                        MOVING ON TO PACKAGES
-#---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
-#package-removal
-users = input("Remove Packages? (y/n)")
-if users == "y" or users == "Y":
-    bump = 0
-while bump == 0:
-    yeet.Popen(['read -p "TeeHee" assman'], shell=True)
-    yeet.Popen(['apt-get purge $assman'], shell=True)
-    godfuckingdamnit.sleep(15)
-    #yeet.Popen(["Y")], shell=False)
-    users = input("Does another fucker need to be removed, ass_man? (y/n)")
-    if users != "y" and users != "Y":
-        bump = 1
-
-while bump == 0:
-    yeet.Popen(['read -p "Name of the thingy, ass_man" assman'], shell=True)
-    yeet.Popen(['apt-get install $assman'], shell=True)
-    godfuckingdamnit.sleep(3)
-    
-    #yeet.Popen(["Y")], shell=False)
-    users = input("Does another sob need to be added, dishwasher? (y/n)")
-    if users != "y" and users != "Y":
-        bump = 1
-	 
-	 
-#bum daemon install
-if input("Install bum, forehead? (y/n)") == ("y" or "Y"):
-    print("Installing bum")
-    yeet.Popen(["apt-get install bum"], shell=True)
-    godfuckingdamnit.sleep(3)
 
 #admin removal
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
