@@ -221,9 +221,9 @@ if ilovejackson.lower() == "y":
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #                                        MOVING ON TO ACCOUNT POLICY
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
-if input("Change account policies, buttlicker?") == ("y" or "Y"):
+'''if input("Change account policies, buttlicker?") == ("y" or "Y"):
 	yeet.Popen(["echo 'auth required pam_tally2.so deny=5 onerr=fail unlock_time=1800' >> /etc/pam.d/common-auth"], shell=True)
-
+'''
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #                                        MOVING ON TO SSH THINGS
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
