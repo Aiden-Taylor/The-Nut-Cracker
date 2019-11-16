@@ -11,7 +11,7 @@ while "$looop"; do
                 echo "Omae wa mou shindeiru, motherfucker. I yeeted $userrem"
         fi
         read -r "Remove another user y/n" next
-        if [[ "$next" != "Y" ]] && [[ "$next != "y" ]]
+        if [[ "$next" != "Y" ]] && [[ "$next != "y" ]];
         then
                 looop=0
         fi
