@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
 #args: username, password
-
-echo "Adding user $0 with pass $1"
-egrep "^$0" /etc/passwd >/dev/null
-pass=$(perl -e 'print crypt($ARGV[0], "password")' $1)
-useradd -m -p $pass $0
-[ $? -eq 0 ] && echo "$0 has been added to system!" || echo "Failed to add a user!"
+read -p "User name?" user
+read -s -p "Password?" passw
+echo "Adding user $user..."
+egrep "^$user" /etc/passwd >/dev/null
+pass=$(perl -e 'print crypt($ARGV[0], "password")' $passw)
+useradd -m -p $pass $user
+[ $? -eq 0 ] && echo "$user has been added to system!" || echo "Failed to add a user!"
