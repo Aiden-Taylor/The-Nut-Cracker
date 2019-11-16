@@ -153,7 +153,7 @@ yeet.Popen(["apt list --installed | less >> yeeters.txt"], shell=True)
 yeet.Popen(["sendmail joshua.reddy@rocklinusd.org  < yeeters.txt"], shell=True)"""
 
 while bump == 0:
-    yeet.Popen(['apt-get purge, read -p "Does another fucker need to be removed, ass_man"')], shell=True)
+    yeet.Popen(['apt-get purge, read -p "Does another fucker need to be removed, ass_man"'], shell=True)
     godfuckingdamnit.sleep(15)
     #yeet.Popen(["Y")], shell=False)
     users = input("Does another fucker need to be removed,ass_man? (y/n)")
