@@ -8,7 +8,7 @@ import time as godfuckingdamnit
 print("Welcome to Aiden's Nut Cracker, better check your cup")
 print("Also, pay homage to Aiden, he is about to get you fat points")
 bump = 1
-
+'''
 yeet.Popen(["chmod +x UserRem.sh"], shell=True)
 yeet.Popen(["chmod +x UserAdd.sh"], shell=True)
 
@@ -118,6 +118,7 @@ while bump == 0:
     users = input("Does anyone else need to be removed from admin permissions, Ivan? (y/n)")
     if users != "y" and users != "Y":
         bump = 1       
+	'''
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #                                        MOVING ON TO GAME REMOVAL
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
