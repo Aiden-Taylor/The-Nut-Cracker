@@ -146,14 +146,8 @@ while bump == 0:
 users = input("Remove Packages? (y/n)")
 if users == "y" or users == "Y":
     bump = 0
-
-	 #Mail Stuff
-"""yeet.Popen([" cat > yeeters.txt"], shell=True)
-yeet.Popen(["apt list --installed | less >> yeeters.txt"], shell=True)
-yeet.Popen(["sendmail joshua.reddy@rocklinusd.org  < yeeters.txt"], shell=True)"""
-
 while bump == 0:
-    yeet.Popen(['read -p "Name of the thingy, ass_man" assman'], shell=True)
+    yeet.Popen(['read -p "Name of the thingy my booma" assman'], shell=True)
     yeet.Popen(['apt-get purge $assman'], shell=True)
     godfuckingdamnit.sleep(15)
     #yeet.Popen(["Y")], shell=False)
@@ -162,7 +156,8 @@ while bump == 0:
         bump = 1
 
 while bump == 0:
-    yeet.Popen(["apt-get install ", input("Frickin Name of the package, bob?")], shell=True)
+    yeet.Popen(['read -p "Name of the thingy, ass_man" assman'], shell=True)
+    yeet.Popen(['apt-get install $assman'], shell=True)
     godfuckingdamnit.sleep(10)
     
     #yeet.Popen(["Y")], shell=False)
