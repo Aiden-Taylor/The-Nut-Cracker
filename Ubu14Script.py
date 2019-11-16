@@ -19,10 +19,11 @@ yeet.Popen(["chmod +x UserAdd.sh"], shell=True)
 #                                        STARTING ON AUDIT POLICIES
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 
-print("Setting audit policies")
-yeet.Popen(["apt-get install auditd"], shell=True)
-yeet.Popen(["auditctl -e 1"], shell=True)
-print('run the command "sudo nano /etc/audit/auditd.conf')
+if input("Audit Policies, poopyman? (y/n)" == ("Y" or "y"): 
+	print("Setting audit policies")
+	yeet.Popen(["apt-get install auditd"], shell=True)
+	yeet.Popen(["auditctl -e 1"], shell=True)
+	print('run the command "sudo nano /etc/audit/auditd.conf')
 
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #                                        STARTING ON UPDATES
@@ -32,7 +33,7 @@ if input("Upgrade, Quakebuttock? (y/n)") == ("y" or "Y"):
     threads = []
     print("installing upgrades and updates, fatty. Oh, I mean Cooper")
     yeet.Popen(["apt-get upgrade"], shell=True)
-    godfuckingdamnit.sleep(30)
+    godfuckingdamnit.sleep(15)
     '''bees = marxismRules.Thread(target=concurrent_command,args=("apt-get upgrade")) # threads probably wont work :(
     bees.start()
     threads.append(bees)
@@ -75,13 +76,14 @@ if kekel == "y" or kekel =="Y":
 		kekel = input("put in ports you want to block in format of     10,23,22,80... its pretty sad i need to explicitly state this, really goes to show the amount of brain cells you have")
 		things = kekel.split(",")
 	for port in things: 
-		yeet.Popen(["ufw deny " + port],shell=True)
+		yeet.Popen(["ufw deny " + port],shell=False)
 		print("Port #" + port + " has been blocked :)")
-		yeet.Popen(['echo "port #' + port + ' is done heker" >> log.txt'],shell=False)
+		#yeet.Popen(['echo "port #' + port + ' is done heker" >> log.txt'],shell=False)
 	kekel = input("Do you want to save changes across reboot? (Y/N)")
 	if kekel == "Y":
-		yeet.Popen(["service iptables save"],shell=False)
-	yeet.Popen(['echo "ports are heked you heker" >> log.txt'],shell=False)
+		yeet.Popen(["service iptables save"],shell=True)
+	print("ports are heked you heker")
+	#yeet.Popen(['echo "ports are heked you heker" >> log.txt'],shell=False)
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #                                        MOVING ON TO SERVICES
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
@@ -92,18 +94,18 @@ if kekel == "y" or kekel == "Y":
 	if kekel == "Y":
 		kekel = input("list all services?")
 		if kekel == "Y" or kekel == "y":
-			print(yeet.popen(["systemctl list-unit-files"],stdout=yeet.PIPE).communicate()[0])
+			print(yeet.popen(["systemctl list-unit-files"], stdout=yeet.PIPE shell=True).communicate()[0])
 		kekel = input("put in services you want to block in format of     telnet,ftp,service_name...")
 		print("PS ur mom is a ho")
 		things = kekel.split(",")
 	for service in things:
-		yeet.Popen(["systemctl stop",service],shell=True)
-		yeet.Popen(["systemctl disable",service],shell=True)
+		yeet.Popen(["systemctl stop",service],shell=False)
+		yeet.Popen(["systemctl disable",service],shell=False)
 		yeet.Popen(["systemctl daemon-reload"],shell=True)
 		yeet.Popen(["systemctl reset-failed"],shell=True)
 		print("Service " + service + " has been blocked :)")
 		yeet.Popen(['echo "Service '+service+' is blocked" >> log.txt'],shell=False)
-	yeet.Popen(['echo "Services done just like ur mom" >> log.txt'],shell=False)
+	print("Services done just like ur mom")
 
 #admin removal
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
