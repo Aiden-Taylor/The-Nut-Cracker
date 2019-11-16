@@ -236,7 +236,8 @@ if input("Change account policies, buttlicker?") == ("y" or "Y"):
 #                                        MOVING ON TO SSH THINGS
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 if input("Stop permitting root login?") == ("Y" or "y"):
-	 yeet.Popen(["sed 's/PermitRootLogin yes/PermitRootLogin no' /etc/pam.d/common-auth"], shell=True)
+	yeet.Popen(["sed 's/PermitRootLogin without-password/PermitRootLogin no' /etc/pam.d/common-auth"], shell=True)
+	yeet.Popen(["sed 's/PermitRootLogin yes/PermitRootLogin no' /etc/pam.d/common-auth"], shell=True)
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
 #                                        MOVING ON TO PAM OPEN
 #---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---
@@ -244,16 +245,10 @@ yeet.Popen(["nano /etc/pam.d/common-password"], shell=True)
 
 #TODO
 '''
-#block ports ftp, vsftpd, --Ivan
 #replacing files for pwd policies and ect --Einstein
     yeet.Popen(["cp -f [original file] [new file]"], shell=True) #change pass age/complexity in replacement file(s)
 #automatic update stuffs --Einstein
     yeet.Popen(["apt-get install unattended-upgrades"], shell=True)
     yeet.Popen(["cp -f /etc/apt/apt.conf.d/10periodic [new file]"], shell=True) #change freq in replacement file
-#ssh root login stuffs --Einstein
-    yeet.Popen(["cp -f /etc/ssh/sshd_config [new file]"], shell=True) #change PermitRootLogin to no
-#***application removal --Khan
- #query for adding groups 
  #disable guest -- Khan
- 
 '''
