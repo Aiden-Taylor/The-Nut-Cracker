@@ -137,3 +137,72 @@ unattendedupgradenoot() {
         echo "Are you on crack?"
     fi
 }
+
+adminyeet(){
+    gogogo=1
+    while [gogogo == 1]
+        read -p "Would you like to yeet any admins, fatahhh..... Cooper." yn
+        if [$yn == "y"]
+        then
+            read -p "Who to destroy?" admyeet
+            userdel $admyeet sudo
+        else
+            gogogo=0
+        fi
+    done
+}
+
+ufwhaha(){
+    read -p "Install and enable ufw, ho?" yn
+    if [$yn = "y"]
+    then
+        apt-get install -y ufw
+        ufw enable
+    else
+        echo "OK, MY BOOMA"
+    fi
+}
+
+bumadd(){
+    read -p "Install bum, you zoomer?" yn
+    if [$yn == "y"]
+    then
+        apt-get install -y bum
+    else
+        echo "Fine, stupid beater"
+    fi
+}
+
+shadowgon(){
+    read -p "Change Shadow permissions, peepeepoopoo man?" yn
+    if [$yn == "y"]
+    then
+        chmod -rwx /etc/shadow
+    else
+        echo "Aight, have fun being hacked"
+    fi
+}
+
+rootlogin(){
+    read -p "Set PermitRootLogin, rooter?" yn
+    if [$yn == "y"]
+    then
+        sed -i /etc/ssh/sshd_config 's/PermitRootLogin yes/\nPermitRootLogin no'
+        sed -i /etc/ssh/sshd_config 's/PermitRootLogin no/\nPermitRootLogin no'
+        sed -i /etc/ssh/sshd_config 's/PermitRootLogin without-password/\nPermitRootLogin no'
+        sed -i /etc/ssh/sshd_config 's/PermitRootLogin force-commands-only/\nPermitRootLogin no'
+    else
+        echo "You're so ugly that Aiden's laptop could render a picture of you."
+    fi
+}
+
+sshinstall(){
+    read -p "Install ssh, commie?" yn
+    if [$yn =="y"]
+    then
+        apt-get install -y openssh-client
+        apt-get install -y openssh-server
+    else
+        echo "You're so dumb that if you were a laptop, you'd be Aiden's"
+    fi
+}
