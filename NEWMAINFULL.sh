@@ -24,6 +24,12 @@ allunits(){
     programyeet
     programneet
     unattendedupgradenoot
+    adminyeet
+    ufwhaha
+    bumadd
+    shadowgon
+    rootlogin
+    sshinstall
     exit
 }
 
