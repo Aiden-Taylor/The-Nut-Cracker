@@ -123,3 +123,13 @@ gameyeet(){
         echo "Ok, you epic gamer"
     fi
 }
+
+upgradenoot() {
+    read -p "Would you like to configure automatic upgrades?" yn
+    if [$yn == "y"]
+    then 
+        apt-get install unatteneded-upgrades
+        nano /etc/apt/apt.conf.d/50unattended-upgrades
+        sed -i '/"${distro_id}:${distro_codename}-updates";/ c\"${distro_id}:${distro_codename}-updates";' /etc/apt/apt.conf.d/50unattended-upgrades
+        echo 'APT::Periodic::Update-Package-Lists "1"; APT::Periodic::Download-Upgradeable-Packages "1"; APT::Periodic::AutocleanInterval "7"; APT::Periodic::Unattended-Upgrade "1";' > /etc/apt/apt.conf.d/20auto-upgrades
+}
