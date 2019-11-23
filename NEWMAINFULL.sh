@@ -5,7 +5,7 @@ echo "Note: never use capital for yes or no questions, fatty"
 echo "Question defaults to no with no input, dumb fu... dude."
 echo "Please God tell me you've done the Forensics..."
 read -p "Have you?" foren
-if ["$foren" = "y"]
+if [["$foren" = "y"]];
 then
     echo "GOGOGO ALL UNITS IN TO DESTROY THEM COMMIES"
     echo "I mean... vulnerabilities"
