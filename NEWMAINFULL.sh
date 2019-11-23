@@ -5,7 +5,7 @@ echo "Note: never use capital for yes or no questions, fatty"
 echo "Question defaults to no with no input, dumb fu... dude."
 echo "Please God tell me you've done the Forensics..."
 read -p "Have you?" foren
-if [$foren == "y"]
+if [$foren = "y"]
 then
     echo "GOGOGO ALL UNITS IN TO DESTROY THEM COMMIES"
     echo "I mean... vulnerabilities"
@@ -35,9 +35,9 @@ allunits(){
 
 useryeet(){
     gogogo=1
-    while [$gogogo == 1]
+    while [$gogogo = 1]
         read -p "Do you wanna yeet a user, fart sniffer?" yn
-        if [$yn == "y"]
+        if [$yn = "y"]
         then
             read -p "Who to remove?" yeet
             userdel $yeet
@@ -49,9 +49,9 @@ useryeet(){
 
 userneet(){
     gogogo=1
-    while [$gogogo == 1]
+    while [$gogogo = 1]
         read -p "Do you wanna add a user, poop licker?" yn
-        if [$yn == "y"]
+        if [$yn = "y"]
         then
             read -p "Who to add?" add
             read -p -s "What password?" pass
@@ -64,9 +64,9 @@ userneet(){
 
 passhurl(){
     gogogo=1
-    while [$gogogo == 1]
+    while [$gogogo = 1]
         read -p "Would you like to change all of the user passwords?" yn
-        if [$yn == "y"]
+        if [$yn = "y"]
         then
             echo "Changing all passwords to !@mBatM@n!"
             many=cut -d: -f1 /etc/passwd | wc -l
@@ -82,9 +82,9 @@ passhurl(){
 
 programyeet(){
     gogogo=1
-    while [$gogogo == 1]
+    while [$gogogo = 1]
         read -p "Would you like to yeet programs, booger connoiseur?" yn
-        if [$yn == "y"]
+        if [$yn = "y"]
         then
             read -p "What program to remove?" progyeet
             apt-get purge -y $progyeet
@@ -96,9 +96,9 @@ programyeet(){
 
 programneet(){
     gogogo=1
-    while [$gogogo == 1]
+    while [$gogogo = 1]
         read -p "Would you like to add programs, black hole... I mean... Josh?" yn
-        if [$yn == "y"]
+        if [$yn = "y"]
         then
             read -p "What program to add?" progadd
             apt-get install -y $progadd
@@ -110,15 +110,15 @@ programneet(){
 
 gameyeet(){
     read -p "Would you like to automatically remove games, Ivan?" yn
-    if [$yn == "y"]
+    if [$yn = "y"]
     then
         apt-get purge -y gnome-games-common gbrainy
         apt-get purge -y aisleriot gnome-sudoku mahjongg ace-of-penguins gnomine gbrainy
         apt-get -y autoremove
         gogogo=1
-        while [$gogogo == 1]
+        while [$gogogo = 1]
             read -p "Any uncommon games to remove, brickhead?" yn
-            if [$yn == "y"]
+            if [$yn = "y"]
             then
                 read -p "What game to remove?" gmyeet
                 apt-get purge -y $gmyeet
@@ -133,7 +133,7 @@ gameyeet(){
 
 unattendedupgradenoot() {
     read -p "Would you like to configure automatic upgrades?" yn
-    if [$yn == "y"]
+    if [$yn = "y"]
     then 
         apt-get install unatteneded-upgrades
         nano /etc/apt/apt.conf.d/50unattended-upgrades
@@ -146,9 +146,9 @@ unattendedupgradenoot() {
 
 adminyeet(){
     gogogo=1
-    while [gogogo == 1]
+    while [gogogo = 1]
         read -p "Would you like to yeet any admins, fatahhh..... Cooper." yn
-        if [$yn == "y"]
+        if [$yn = "y"]
         then
             read -p "Who to destroy?" admyeet
             userdel $admyeet sudo
@@ -171,7 +171,7 @@ ufwhaha(){
 
 bumadd(){
     read -p "Install bum, you zoomer?" yn
-    if [$yn == "y"]
+    if [$yn = "y"]
     then
         apt-get install -y bum
     else
@@ -181,7 +181,7 @@ bumadd(){
 
 shadowgon(){
     read -p "Change Shadow permissions, peepeepoopoo man?" yn
-    if [$yn == "y"]
+    if [$yn = "y"]
     then
         chmod -rwx /etc/shadow
     else
@@ -191,7 +191,7 @@ shadowgon(){
 
 rootlogin(){
     read -p "Set PermitRootLogin, rooter?" yn
-    if [$yn == "y"]
+    if [$yn = "y"]
     then
         sed -i /etc/ssh/sshd_config 's/PermitRootLogin yes/\nPermitRootLogin no'
         sed -i /etc/ssh/sshd_config 's/PermitRootLogin no/\nPermitRootLogin no'
@@ -204,7 +204,7 @@ rootlogin(){
 
 sshinstall(){
     read -p "Install ssh, commie?" yn
-    if [$yn =="y"]
+    if [$yn ="y"]
     then
         apt-get install -y openssh-client
         apt-get install -y openssh-server
