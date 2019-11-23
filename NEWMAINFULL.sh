@@ -23,6 +23,7 @@ allunits(){
     passhurl
     programyeet
     programneet
+    unattendedupgradenoot
     exit
 }
 
