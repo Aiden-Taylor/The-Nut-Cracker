@@ -20,6 +20,7 @@ allunits(){
 useryeet(){
     gogogo=1
     while (($gogogo = 1))
+    do
         read -p "Do you wanna yeet a user, fart sniffer?" yn
         if (($yn = "y"))
         then
@@ -34,6 +35,7 @@ useryeet(){
 userneet(){
     gogogo=1
     while (($gogogo = 1))
+    do
         read -p "Do you wanna add a user, poop licker?" yn
         if (($yn = "y"))
         then
@@ -49,6 +51,7 @@ userneet(){
 passhurl(){
     gogogo=1
     while (($gogogo = 1))
+    do
         read -p "Would you like to change all of the user passwords?" yn
         if (($yn = "y"))
         then
@@ -67,6 +70,7 @@ passhurl(){
 programyeet(){
     gogogo=1
     while (($gogogo = 1))
+    do
         read -p "Would you like to yeet programs, booger connoiseur?" yn
         if (($yn = "y"))
         then
@@ -81,6 +85,7 @@ programyeet(){
 programneet(){
     gogogo=1
     while (($gogogo = 1))
+    do
         read -p "Would you like to add programs, black hole... I mean... Josh?" yn
         if (($yn = "y"))
         then
@@ -101,6 +106,7 @@ gameyeet(){
         apt-get -y autoremove
         gogogo=1
         while (($gogogo = 1))
+        do
             read -p "Any uncommon games to remove, brickhead?" yn
             if (($yn = "y"))
             then
@@ -131,6 +137,7 @@ unattendedupgradenoot() {
 adminyeet(){
     gogogo=1
     while ((gogogo = 1))
+    do
         read -p "Would you like to yeet any admins, fatahhh..... Cooper." yn
         if (($yn = "y"))
         then
