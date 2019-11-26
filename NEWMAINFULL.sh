@@ -4,7 +4,7 @@ allunits(){
     echo "Starting to yeet Cooper"
     useryeet
     userneet
-    passhurl
+    #passhurl //Commented out until finished!
     programyeet
     programneet
     unattendedupgradenoot
