@@ -4,7 +4,7 @@ allunits(){
     echo "Starting to yeet Cooper"
     useryeet
     userneet
-    #passhurl //Commented out until finished!
+    #passhurl //Commented out for testing purposes!
     programyeet
     programneet
     unattendedupgradenoot
@@ -48,7 +48,7 @@ userneet(){
     done
 }
 
-passhurl(){
+: 'passhurl(){
     gogogo=1
     while (($gogogo = 1))
     do
@@ -66,6 +66,7 @@ passhurl(){
         fi
     done
 }
+'
 
 programyeet(){
     gogogo=1
