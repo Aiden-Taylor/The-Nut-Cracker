@@ -1,20 +1,4 @@
 #!/bin/bash
-echo "Welcome to The Nut Cracker, an effort from the #1 most average team in Cyber Patriot"
-echo "Brought to you by competitors from The Forbidden Burrito"
-echo "Note: never use capital for yes or no questions, fatty"
-echo "Question defaults to no with no input, dumb fu... dude."
-echo "Please God tell me you've done the Forensics..."
-read -p "Have you?" foren
-echo $foren
-if (("$foren" == "y")); then
-    echo "GOGOGO ALL UNITS IN TO DESTROY THEM COMMIES"
-    echo "I mean... vulnerabilities"
-    allunits
-else
-    echo "Nuking the vulnerabilities will probably give you no chance at the Forensics..."
-    echo "Come back when you're done"
-    exit
-fi
 
 allunits(){
     echo "Starting to yeet Cooper"
@@ -32,6 +16,23 @@ allunits(){
     sshinstall
     exit
 }
+
+echo "Welcome to The Nut Cracker, an effort from the #1 most average team in Cyber Patriot"
+echo "Brought to you by competitors from The Forbidden Burrito"
+echo "Note: never use capital for yes or no questions, fatty"
+echo "Question defaults to no with no input, dumb fu... dude."
+echo "Please God tell me you've done the Forensics..."
+read -p "Have you?" foren
+echo $foren
+if (("$foren" == "y")); then
+    echo "GOGOGO ALL UNITS IN TO DESTROY THEM COMMIES"
+    echo "I mean... vulnerabilities"
+    allunits
+else
+    echo "Nuking the vulnerabilities will probably give you no chance at the Forensics..."
+    echo "Come back when you're done"
+    exit
+fi
 
 useryeet(){
     gogogo=1
