@@ -79,7 +79,15 @@ programyeet(){
             read -p "What program to remove?" progyeet
             apt-get purge -y $progyeet
         else
+            echo "Ok, wireshark professional"
             gogogo=0
+        fi
+        read -p "remove netcat for ez points?" yn
+        if (($yn = "y"))
+        then
+            apt-get purge -y netcat
+        else
+            echo "I didn't peg you for a cat person..."
         fi
     done
 }
