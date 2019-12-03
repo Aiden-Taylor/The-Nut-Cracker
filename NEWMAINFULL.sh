@@ -14,6 +14,7 @@ allunits(){
     shadowgon
     rootlogin
     sshinstall
+    cookiesyum
     exit
 }
 
@@ -202,6 +203,16 @@ sshinstall(){
         apt-get install -y openssh-server
     else
         echo "You're so dumb that if you were a laptop, you'd be Aiden's"
+    fi
+}
+
+cookiesyum(){
+    read -p "IPv4 TCP SYN Cookies, laptop cracker?" yn
+    if (($yn ="y"))
+    then
+        echo "net.ipv4.tcp_syncookies = 1" >> /etc/sysctl.conf
+    else
+        echo "You're the type of person who forgets to delete the plaintext passwords"
     fi
 }
 
