@@ -2,6 +2,7 @@
 
 allunits() {
   blockports
+  terminateservices
 }
 blockports() {
   maxcannotseethiscolor = 1
