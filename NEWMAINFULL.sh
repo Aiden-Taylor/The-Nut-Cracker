@@ -15,6 +15,7 @@ allunits(){
     rootlogin
     sshinstall
     cookiesyum
+    upgradessss
     exit
 }
 
@@ -224,14 +225,24 @@ cookiesyum(){
     fi
 }
 
+upgradessss(){
+    read -p "Install fat upgrades that take a LOOOOONG time?"
+    if (($yn = "y"))
+    then
+        apt-get -y update
+        apt-get -y upgrade
+    else
+        echo "Oh, you must not have much time to live, you fat idiot"
+    fi
+}
+
 echo "Welcome to The Nut Cracker, an effort from the #1 most average team in Cyber Patriot"
 echo "Brought to you by competitors from The Forbidden Burrito"
 echo "Note: never use capital for yes or no questions, fatty"
 echo "Question defaults to no with no input, dumb fu... dude."
 echo "Please God tell me you've done the Forensics..."
-read -p "Have you?" foren
-echo $foren
-if (("$foren" == "y")); then
+read -p "Have you?" yn
+if (("$yn" == "y")); then
     echo "GOGOGO ALL UNITS IN TO DESTROY THEM COMMIES"
     echo "I mean... vulnerabilities"
     allunits
