@@ -17,3 +17,25 @@ blockports() {
     fi
   done
 }
+terminateservices() {
+ maxisaverynicehumanbeingonoppisiteday = 1
+ read -p "do you wan services listed, bubby?" goose
+ if ((goose = "y"))
+ then
+  systemctl list-unit-files
+ fi
+ while (($maxcannotseethiscolor = 1))
+ do
+   read -p "eliminate services you dirty fucking good for nothing goddamn weeaboo" bep
+   if (($bep = "y"))
+   then
+     read -p "service to go" servicething
+     systemctl stop $servicething
+     systemctl disable $servicething
+     systemctl daemon-reload
+     systemctl reset-failed
+    else
+     maxisaverynicehumanbeingonoppisiteday = 0
+    fi
+ done
+}
